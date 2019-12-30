@@ -11,7 +11,7 @@ use Auth;
 class UserController extends Controller
 {
     /** 
-     * Register api 
+     * Register API user
      * 
      * @return \Illuminate\Http\Response 
      */ 
@@ -36,6 +36,11 @@ class UserController extends Controller
 		return response()->json(['success'=>$success], 200); 
     }
 
+    /** 
+     * Login API user
+     * 
+     * @return \Illuminate\Http\Response 
+     */ 
     public function login(){ 
         if(Auth::attempt(['email' => request('email'), 'password' => request('password')])){ 
             $user = Auth::user(); 
