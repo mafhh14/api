@@ -21,4 +21,4 @@ Route::post('register', 'API\UserController@register');
 Route::post('login', 'API\UserController@login');
 
 // Get all transactions
-Route::get('transactions', 'API/TransactionController@transactions')
+Route::get('transactions', 'API\TransactionController@transactions');
