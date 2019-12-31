@@ -3,28 +3,31 @@
 composer install
 
 
-## Transations
+### Transations
 
-### Get all transactions:
+#### Get all transactions:
 /api/transactions
 
-### Get one transactions
+#### Get one transactions
 /api/transaction/[line]
 
 * line would be the .csv line no.
 
 
-## API User
+### API User
 
-### Register API user
+#### Register API user
 api/register
 
+#### Paramaters
 * name
 * email
 * password
 * confirm Password
 
-### Get one transactions
-/transaction/[line]
+#### Login API user
+/login
 
-* line would be the .csv line no.
+#### Paramaters
+* email
+* password
