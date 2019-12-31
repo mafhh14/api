@@ -19,3 +19,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::post('register', 'API\UserController@register');
 Route::post('login', 'API\UserController@login');
+
+// Get all transactions
+Route::get('transactions', 'API/TransactionController@transactions')
