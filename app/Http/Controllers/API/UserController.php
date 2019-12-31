@@ -17,6 +17,7 @@ class UserController extends Controller
      */ 
     public function register(Request $request) 
     {
+        // Validate inputs
         $validator = Validator::make($request->all(), [ 
             'name' => 'required', 
             'email' => 'required|email', 
@@ -24,10 +25,12 @@ class UserController extends Controller
             'confirm_password' => 'required|same:password', 
         ]);
 
+        // If falied to validate
         if ($validator->fails()) { 
             return response()->json(['error'=>$validator->errors()], 401);
         }
 
+        // Inputs need to store
 		$input = $request->all(); 
         $input['password'] = bcrypt($input['password']); 
         $user = User::create($input); 
