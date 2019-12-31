@@ -22,3 +22,6 @@ Route::post('login', 'API\UserController@login');
 
 // Get all transactions
 Route::get('transactions', 'API\TransactionController@transactions');
+
+// Get one transaction
+Route::get('transaction/{line}', 'API\TransactionController@transaction')->where('line', '[0-9]+');
