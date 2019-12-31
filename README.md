@@ -3,12 +3,12 @@
 composer install
 
 
-## Master API
+## Transations
 
-- Get all transactions:
+### Get all transactions:
 /transactions
 
-- Get one transactions
+### Get one transactions
 /transaction/[line]
 
 * line would be the .csv line no.
